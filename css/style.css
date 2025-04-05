@@ -1,0 +1,299 @@
+/* Style principal pour le site de formation IA */
+:root {
+  --primary-color: #4CAF50;
+  --secondary-color: #2196F3;
+  --dark-color: #333;
+  --light-color: #f4f4f4;
+  --danger-color: #dc3545;
+  --success-color: #28a745;
+  --max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: var(--dark-color);
+  background-color: var(--light-color);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+  border-radius: 5px;
+}
+
+header h1 {
+  font-size: 1.8rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 1.5rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #e0e0e0;
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/ai-background.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  max-width: 800px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: opacity 0.3s;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background: var(--secondary-color);
+}
+
+.section {
+  padding: 3rem 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.content {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.content h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.content h3 {
+  color: var(--secondary-color);
+  margin: 1.5rem 0 1rem;
+}
+
+.content ul, .content ol {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  margin-bottom: 1rem;
+}
+
+.content a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.content a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background: var(--dark-color);
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+.systinfo-link {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.systinfo-link:hover {
+  background-color: #3d8b40;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+  }
+  
+  .logo-container {
+    margin-bottom: 1rem;
+    justify-content: center;
+  }
+  
+  nav ul {
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin: 0.5rem;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .content h2 {
+    font-size: 1.6rem;
+  }
+  
+  .content h3 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 500px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+  
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+  
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .content {
+    padding: 1.5rem;
+  }
+  
+  .btn {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;
+  }
+}
