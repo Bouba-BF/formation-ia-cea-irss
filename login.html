@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Connexion - Formation IA</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .login-container {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .error-message {
+            color: red;
+            margin-top: 10px;
+            display: none;
+        }
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo {
+            max-width: 150px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo-container">
+            <img src="images/logo.jpg" alt="Logo Systinfo" class="logo">
+        </div>
+        <h2>Accès à la formation IA</h2>
+        <p>Veuillez vous connecter pour accéder au contenu de la formation.</p>
+        
+        <div class="form-group">
+            <label for="username">Nom d'utilisateur :</label>
+            <input type="text" id="username" name="username">
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password">
+        </div>
+        
+        <button onclick="checkLogin()">Se connecter</button>
+        
+        <p id="error-message" class="error-message">Nom d'utilisateur ou mot de passe incorrect.</p>
+    </div>
+
+    <script>
+        function checkLogin() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            
+            // Liste des utilisateurs autorisés
+            var users = [
+                { username: "formation", password: "cea2025" },
+                { username: "chercheur", password: "irss2025" },
+                { username: "enseignant", password: "itech2025" }
+            ];
+            
+            // Vérifier si les identifiants correspondent à un utilisateur
+            var authenticated = false;
+            for (var i = 0; i < users.length; i++) {
+                if (username === users[i].username && password === users[i].password) {
+                    authenticated = true;
+                    break;
+                }
+            }
+            
+            if (authenticated) {
+                // Stocker l'état de connexion dans sessionStorage
+                sessionStorage.setItem('authenticated', 'true');
+                // Rediriger vers la page d'accueil
+                window.location.href = "index.html";
+            } else {
+                document.getElementById('error-message').style.display = 'block';
+            }
+        }
+
+        // Permettre la connexion en appuyant sur Entrée
+        document.getElementById("password").addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+                checkLogin();
+            }
+        });
+    </script>
+</body>
+</html>
