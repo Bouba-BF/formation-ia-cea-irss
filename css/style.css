@@ -465,3 +465,42 @@ footer {
         font-size: 1.3rem;
     }
 }
+
+
+/* Optimisation pour les mobiles */
+@media (max-width: 576px) {
+    .presentation-download {
+        padding: 10px;
+    }
+    
+    .download-button {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .profiles-section {
+        gap: 10px;
+    }
+    
+    .profile-card {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .formateur-info {
+        padding: 10px;
+    }
+}
+
+/* Correction pour éviter le débordement horizontal */
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    padding: 0 15px;
+}
+
