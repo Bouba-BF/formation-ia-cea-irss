@@ -1,0 +1,70 @@
+/* Solution complète pour les menus déroulants */
+
+/* Styles de base pour les menus déroulants */
+.dropdown {
+    position: relative !important;
+    display: inline-block !important;
+}
+
+.dropdown-content {
+    display: none !important;
+    position: absolute !important;
+    background-color: #f9f9f9 !important;
+    min-width: 200px !important;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2) !important;
+    z-index: 999 !important; /* Z-index augmenté pour dépasser le header (z-index: 100) */
+    top: 100% !important; /* Position explicite sous l'élément parent */
+    left: 0 !important; /* Aligné à gauche de l'élément parent */
+}
+
+.dropdown-content a {
+    color: black !important;
+    padding: 12px 16px !important;
+    text-decoration: none !important;
+    display: block !important;
+    text-align: left !important;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1 !important;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block !important;
+}
+
+/* Ajout pour s'assurer que le menu est visible */
+.dropbtn {
+    cursor: pointer !important;
+    position: relative !important;
+    z-index: 1000 !important;
+}
+
+/* Correction pour les appareils mobiles */
+@media screen and (max-width: 768px) {
+    /* Annuler les styles problématiques du CSS principal */
+    nav ul {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        width: 100% !important;
+    }
+    
+    .dropdown {
+        width: 100% !important;
+    }
+    
+    .dropdown-content {
+        position: absolute !important; /* Garder absolute même sur mobile */
+        width: 100% !important;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2) !important;
+        left: 0 !important;
+        top: 100% !important;
+    }
+    
+    /* Amélioration pour l'expérience mobile */
+    .dropbtn {
+        width: 100% !important;
+        text-align: left !important;
+        padding: 10px !important;
+    }
+}
