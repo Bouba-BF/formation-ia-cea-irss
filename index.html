@@ -1,140 +1,51 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <style>
-/* Solution complète pour les menus déroulants */
-
-/* Styles de base pour les menus déroulants */
-.dropdown {
-    position: relative !important;
-    display: inline-block !important;
-}
-
-.dropdown-content {
-    display: none !important;
-    position: absolute !important;
-    background-color: #f9f9f9 !important;
-    min-width: 200px !important;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2) !important;
-    z-index: 999 !important; /* Z-index augmenté pour dépasser le header (z-index: 100) */
-    top: 100% !important; /* Position explicite sous l'élément parent */
-    left: 0 !important; /* Aligné à gauche de l'élément parent */
-}
-
-.dropdown-content a {
-    color: black !important;
-    padding: 12px 16px !important;
-    text-decoration: none !important;
-    display: block !important;
-    text-align: left !important;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1 !important;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block !important;
-}
-
-/* Ajout pour s'assurer que le menu est visible */
-.dropbtn {
-    cursor: pointer !important;
-    position: relative !important;
-    z-index: 1000 !important;
-}
-
-/* Correction pour les appareils mobiles */
-@media screen and (max-width: 768px) {
-    /* Annuler les styles problématiques du CSS principal */
-    nav ul {
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        width: 100% !important;
-    }
-    
-    .dropdown {
-        width: 100% !important;
-    }
-    
-    .dropdown-content {
-        position: absolute !important; /* Garder absolute même sur mobile */
-        width: 100% !important;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2) !important;
-        left: 0 !important;
-        top: 100% !important;
-    }
-    
-    /* Amélioration pour l'expérience mobile */
-    .dropbtn {
-        width: 100% !important;
-        text-align: left !important;
-        padding: 10px !important;
-    }
-}
-
-</style>
-
     <meta charset="UTF-8">
     <script src="js/auth.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formation IA pour Chercheurs et Enseignants - CEA ITECH-MTV & IRSS</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dropdown-fix.css">
+    <link rel="stylesheet" href="css/dropdown-fix.css">
+    <link rel="stylesheet" href="css/dropdown-fix.css">
 </head>
 <body>
-        <header>
+    <header>
         <div class="container">
             <div class="logo-container">
                 <img src="images/logo.jpg" alt="Logo Systinfo" class="logo">
                 <h4>. </h4>
             </div>
-   <nav>
-    <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="programme.html">Programme</a></li>
-        
-        <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">Contenu par jour</a>
-            <div class="dropdown-content">
-                <a href="generalites-ia.html">Jour 1 - Généralités IA</a>
-                <a href="prompt-engineering.html">Jour 2 - Prompt Engineering</a>
-                <a href="extraction-synthese.html">Jour 3 - Extraction et Synthèse</a>
-                <a href="redaction-assistee.html">Jour 4 - Rédaction Assistée</a>
-            </div>
-        </li>
-        
-        <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">Ressources</a>
-            <div class="dropdown-content">
-                <a href="presentations.html">Présentations</a>
-                <a href="exercices.html">Exercices pratiques</a>
-                <a href="documents.html">Documents complémentaires</a>
-            </div>
-        </li>
-        
-        <li><a href="applications.html">Applications</a></li>
-        <li><a href="recommandations.html">Recommandations</a></li>
-    </ul>
-</nav>            
-            
-    <!--        
             <nav>
-    <div class="container">
-        <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="programme.html">Programme</a></li>
-            <li><a href="generalites-ia.html">Généralités IA</a></li>
-            <li><a href="applications.html">Applications</a></li>
-            <li><a href="contenus.html">Contenus Opérationnels</a></li>
-            <li><a href="techniques-extraction.html">Techniques d'extraction</a></li>
-            <li><a href="prompt-engineering.html">Prompt Engineering</a></li>
-            <li><a href="exemples-prompts.html">Exemples de Prompts</a></li>
-            <li><a href="recommandations.html">Recommandations</a></li>
-        </ul>
-    </div>
-</nav>
--->
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="programme.html">Programme</a></li>
+                    
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Contenu par jour</a>
+                        <div class="dropdown-content">
+                            <a href="generalites-ia.html">Jour 1 - Généralités IA</a>
+                            <a href="prompt-engineering.html">Jour 2 - Prompt Engineering</a>
+                            <a href="extraction-synthese.html">Jour 3 - Extraction et Synthèse</a>
+                            <a href="redaction-assistee.html">Jour 4 - Rédaction Assistée</a>
+                        </div>
+                    </li>
+                    
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Ressources</a>
+                        <div class="dropdown-content">
+                            <a href="presentations.html">Présentations</a>
+                            <a href="exercices.html">Exercices pratiques</a>
+                            <a href="documents.html">Documents complémentaires</a>
+                        </div>
+                    </li>
+                    
+                    <li><a href="applications.html">Applications</a></li>
+                    <li><a href="recommandations.html">Recommandations</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -204,30 +115,19 @@
     </section>
 
     <footer>
-    <div class="container">
-        <div class="formateur-info">
-            <h3>Formateur</h3>
-            <p>Dr OUEDRAOGO Boukary, MD, MPH, PHD</p>
-            <p>Contact: <a href="mailto:support@systinfo.ai">support@systinfo.ai</a></p>
+        <div class="container">
+            <div class="formateur-info">
+                <h3>Formateur</h3>
+                <p>Dr OUEDRAOGO Boukary, MD, MPH, PHD</p>
+                <p>Contact: <a href="mailto:support@systinfo.ai">support@systinfo.ai</a></p>
+            </div>
+            <p>&copy; 2025 Formation IA pour Chercheurs et Enseignants - CEA ITECH-MTV & IRSS</p>
+            <p>Tous droits réservés</p>
+            <a href="https://systinfo.ai" target="_blank" class="systinfo-link">Visiter systinfo.ai</a>
         </div>
-        <p>&copy; 2025 Formation IA pour Chercheurs et Enseignants - CEA ITECH-MTV & IRSS</p>
-        <p>Tous droits réservés</p>
-        <a href="https://systinfo.ai" target="_blank" class="systinfo-link">Visiter systinfo.ai</a>
-    </div>
-</footer>
-    <script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Ajouter des écouteurs d'événements pour chaque menu déroulant
-  var dropdowns = document.querySelectorAll('.dropdown');
-  dropdowns.forEach(function(dropdown) {
-    dropdown.addEventListener('mouseenter', function() {
-      this.querySelector('.dropdown-content').style.display = 'block';
-    });
-    dropdown.addEventListener('mouseleave', function() {
-      this.querySelector('.dropdown-content').style.display = 'none';
-    });
-  });
-});
-</script>
+    </footer>
+    <script src="js/dropdown.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/dropdown.js"></script>
 </body>
 </html>
