@@ -42,22 +42,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Ajouter des écouteurs d'événements pour chaque menu déroulant
-  var dropdowns = document.querySelectorAll('.dropdown');
-  dropdowns.forEach(function(dropdown) {
-    dropdown.addEventListener('mouseenter', function() {
-      this.querySelector('.dropdown-content').style.display = 'block';
-    });
-    dropdown.addEventListener('mouseleave', function() {
-      this.querySelector('.dropdown-content').style.display = 'none';
-    });
-  });
-});
-</script>
-
-    <header>
+        <header>
         <div class="container">
             <div class="logo-container">
                 <img src="images/logo.jpg" alt="Logo Systinfo" class="logo">
@@ -189,5 +174,19 @@ document.addEventListener('DOMContentLoaded', function() {
         <a href="https://systinfo.ai" target="_blank" class="systinfo-link">Visiter systinfo.ai</a>
     </div>
 </footer>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Ajouter des écouteurs d'événements pour chaque menu déroulant
+  var dropdowns = document.querySelectorAll('.dropdown');
+  dropdowns.forEach(function(dropdown) {
+    dropdown.addEventListener('mouseenter', function() {
+      this.querySelector('.dropdown-content').style.display = 'block';
+    });
+    dropdown.addEventListener('mouseleave', function() {
+      this.querySelector('.dropdown-content').style.display = 'none';
+    });
+  });
+});
+</script>
 </body>
 </html>
